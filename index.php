@@ -8,15 +8,6 @@
 <br>
 <a href="register.php">注册</a>
 </div>
-<?php
-/**
- * Created by PhpStorm.
- * User: Dev01
- * Date: 15-3-17
- * Time: 上午9:56
- */
-
-?>
 
 <?php
 include("inc/footer.html");

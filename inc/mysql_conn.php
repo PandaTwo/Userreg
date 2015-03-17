@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Dev01
- * Date: 15-3-17
- * Time: 上午10:31
- */
 define("HOST","localhost");
 define("DB_NAME","test");
 define("DATABASEPWD","");
