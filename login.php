@@ -1,5 +1,5 @@
 <?php
-    include("inc/header.html");
+    include("inc/header.php");
 
 ?>
 <h1>用户登录</h1>

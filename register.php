@@ -1,5 +1,5 @@
 <?php
-include("inc/header.html");
+include("inc/header.php");
 ?>
     <div style="width: 1000px;">
         <form action="class/register.class.php" onsubmit="return validate_input();" method="post">
