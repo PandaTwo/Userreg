@@ -1,6 +1,6 @@
 <?php
 
-$dbc = mysqli_connect('localhost','root','');
+$dbc = mysqli_connect('localhost','root','123456');
 if ( !$dbc ) {
     die(mysqli_error($dbc));
 }

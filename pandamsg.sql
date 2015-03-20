@@ -1,54 +1,55 @@
--- phpMyAdmin SQL Dump
--- version 4.0.4.1
--- http://www.phpmyadmin.net
---
--- 主机: 127.0.0.1
--- 生成日期: 2015-03-17 17:43:30
--- 服务器版本: 5.6.11
--- PHP 版本: 5.5.1
+/*
+Navicat MySQL Data Transfer
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+Source Server         : localhost_3306
+Source Server Version : 50533
+Source Host           : localhost:3306
+Source Database       : pandamsg
 
+Target Server Type    : MYSQL
+Target Server Version : 50533
+File Encoding         : 65001
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+Date: 2015-03-21 01:00:34
+*/
 
---
--- 数据库: `pandamsg`
---
-CREATE DATABASE IF NOT EXISTS `pandamsg` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `pandamsg`;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `customer`
---
-
-CREATE TABLE IF NOT EXISTS `customer` (
+SET FOREIGN_KEY_CHECKS=0;
+-- ----------------------------
+-- Table structure for `customer`
+-- ----------------------------
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE `customer` (
   `ID` int(255) NOT NULL AUTO_INCREMENT,
   `UserName` varchar(1000) NOT NULL,
   `Pwd` varchar(1000) NOT NULL,
   PRIMARY KEY (`ID`),
   UNIQUE KEY `ID_2` (`ID`),
   KEY `ID` (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `customer`
---
+-- ----------------------------
+-- Records of customer
+-- ----------------------------
+INSERT INTO `customer` VALUES ('1', 'admin', '123456');
+INSERT INTO `customer` VALUES ('2', 'pandait', '123456');
+INSERT INTO `customer` VALUES ('3', 'abc', '123456');
+INSERT INTO `customer` VALUES ('4', 'username', '123456');
+INSERT INTO `customer` VALUES ('5', 'username', '123456');
+INSERT INTO `customer` VALUES ('6', 'lalarola', 'lalarola');
 
-INSERT INTO `customer` (`ID`, `UserName`, `Pwd`) VALUES
-(1, 'admin', '123456'),
-(2, 'pandait', '123456'),
-(3, 'abc', '123456'),
-(4, 'username', '123456'),
-(5, 'username', '123456'),
-(6, 'lalarola', 'lalarola');
+-- ----------------------------
+-- Table structure for `messages`
+-- ----------------------------
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE `messages` (
+  `id` int(255) NOT NULL AUTO_INCREMENT,
+  `userid` int(11) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `content` text NOT NULL,
+  `createOn` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- ----------------------------
+-- Records of messages
+-- ----------------------------
